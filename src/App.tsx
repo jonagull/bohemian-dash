@@ -6,6 +6,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      <WeatherWidget />
     </React.Fragment>
   );
 }
