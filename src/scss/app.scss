@@ -1,3 +1,32 @@
+$background-color: #272727;
+$secondary-color: #747474;
+
 body {
-    background: #2c3531;
+    background: $background-color;
+}
+
+.header--container {
+    margin: 30px 5% 0 5%;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+
+    .logo--container {
+        margin: 0 0 0 20px;
+        justify-content: flex-start;
+
+        img {
+            height: 45px;
+            width: auto;
+        }
+    }
+}
+
+
+.helicopters {
+    justify-content: center;
+    align-items: center;
 }
