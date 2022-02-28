@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import WindIcon from "../assets/WindIcon";
 import HumidIcon from "../assets/HumidIcon";
 import { weatherIcons } from "../../constants";
 import { Weather } from "../../types";
-import { WeatherIcon } from "../../constants";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
@@ -11,11 +10,10 @@ export default function WeatherWidget() {
   const url1 =
     "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=10";
 
-  if (!weather) {
+  useEffect(() => {
     fetch(url1)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setWeather({
           windSpeed:
             data.properties.timeseries[0].data.instant.details.wind_speed,
@@ -28,7 +26,7 @@ export default function WeatherWidget() {
               .relative_humidity,
         });
       });
-  }
+  }, []);
 
   const IconComponent =
     weather && weather.icon ? weatherIcons[weather.icon] : null;
