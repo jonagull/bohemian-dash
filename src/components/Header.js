@@ -1,12 +1,12 @@
 import React from "react";
-import BhdLogo from "./assets/bhd-logo";
+import Applogo from "./assets/AppLogo";
 
 export default function Header() {
   return (
     <React.Fragment>
       <header className="header">
         <div className="header__logo">
-          <BhdLogo />
+          <Applogo />
         </div>
       </header>
     </React.Fragment>
