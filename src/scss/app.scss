@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.header--container {
+.header {
   margin: 30px 5% 0 5%;
   width: 90%;
   height: 80px;
@@ -22,7 +22,7 @@ body {
   display: flex;
   align-items: center;
 
-  .logo--container {
+  .header__logo {
     margin: 0 0 0 20px;
     justify-content: flex-start;
 
