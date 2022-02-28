@@ -4,6 +4,6 @@ import { WeatherIcon } from "./constants";
 export interface Weather {
   windSpeed: number;
   icon: WeatherIcon;
-  airTempature: number;
+  airTemperature: number;
   humidity: number;
 }

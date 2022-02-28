@@ -3,9 +3,10 @@ import WindIcon from "../assets/WindIcon";
 import HumidIcon from "../assets/HumidIcon";
 import { weatherIcons } from "../../constants";
 import { Weather } from "../../types";
+import { WeatherIcon } from "../../constants";
 
 export default function WeatherWidget() {
-  const [weather, setWeather] = useState({} | null);
+  const [weather, setWeather] = useState<Weather | null>(null);
 
   const url1 =
     "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=10";
@@ -15,7 +16,6 @@ export default function WeatherWidget() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        console.log(weather);
         setWeather({
           windSpeed:
             data.properties.timeseries[0].data.instant.details.wind_speed,
@@ -38,7 +38,7 @@ export default function WeatherWidget() {
       <div className="weather-widget--wrapper">
         <div className="content--container">
           {IconComponent && <IconComponent />}
-          <h1>{weather.airTemperature}°</h1>
+          {weather && <h1>{weather.airTemperature}°</h1>}
           <p></p>
         </div>
         <div className="stats--container">
