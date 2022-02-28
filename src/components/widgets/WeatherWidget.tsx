@@ -3,6 +3,7 @@ import WindIcon from "../assets/WindIcon";
 import HumidIcon from "../assets/HumidIcon";
 import { weatherIcons } from "../../constants";
 import { Weather } from "../../types";
+import { WeatherIcon } from "../../constants";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
