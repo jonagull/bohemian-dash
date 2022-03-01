@@ -1,38 +1,13 @@
 import React, { useEffect, useState } from "react";
 import WindIcon from "../assets/WindIcon";
 import HumidIcon from "../assets/HumidIcon";
-import { weatherIcons } from "../../constants";
+import { weatherIcons, LocalStorageKeys } from "../../constants";
 import { Weather } from "../../types";
+import { useGeoLocationCoords } from "./useGeoLocationCoords";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
-
-  useEffect(() => {
-    try {
-      navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position);
-      });
-    } catch (err) {
-      console.log(err);
-    }
-    fetch(
-      "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=10"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setWeather({
-          windSpeed:
-            data.properties.timeseries[0].data.instant.details.wind_speed,
-          icon: data.properties.timeseries[0].data.next_1_hours.summary
-            .symbol_code,
-          airTemperature:
-            data.properties.timeseries[0].data.instant.details.air_temperature,
-          humidity:
-            data.properties.timeseries[0].data.instant.details
-              .relative_humidity,
-        });
-      });
-  }, []);
+  const { latitude, longitude } = useGeoLocationCoords(setWeather);
 
   const IconComponent =
     weather && weather.icon ? weatherIcons[weather.icon] : null;
