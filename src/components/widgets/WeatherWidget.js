@@ -1,6 +1,6 @@
-import React from 'react';
-import WindIcon from '../assets/windIcon';
-import HumidIcon from '../assets/humidIcon';
+import React from "react";
+import WindIcon from "../assets/WindIcon";
+import HumidIcon from "../assets/HumidIcon";
 
 
 export default function WeatherWidget (props) {
