@@ -35,7 +35,7 @@ body {
   }
 }
 
-.weather-widget--wrapper {
+.weather-widget__wrapper {
   margin: 10px 0 0 20px;
   height: 300px;
   width: 300px;
@@ -58,7 +58,7 @@ body {
     justify-content: center;
   }
 
-  .stats--container {
+  .stats__container {
     display: flex;
 
     div {

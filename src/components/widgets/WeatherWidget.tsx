@@ -34,13 +34,13 @@ export default function WeatherWidget() {
 
   return (
     <React.Fragment>
-      <div className="weather-widget--wrapper">
-        <div className="content--container">
+      <div className="weather-widget__wrapper">
+        <div className="content__container">
           {IconComponent && <IconComponent />}
           {weather && <h1>{weather.airTemperature}°</h1>}
           <p></p>
         </div>
-        <div className="stats--container">
+        <div className="stats__container">
           <div>
             <span>
               <WindIcon />
