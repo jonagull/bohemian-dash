@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { LocalStorageKeys } from "../../constants";
 import { Weather } from "../../types";
 
 export function useGeoLocationCoords(setWeather: (weather: Weather) => void) {
-  let latitude: number | null = null;
-  let longitude: number | null = null;
+  const [lat, setLat] = useState(0);
+  const [long, setLong] = useState(0);
 
   useEffect(() => {
     try {
@@ -18,18 +18,24 @@ export function useGeoLocationCoords(setWeather: (weather: Weather) => void) {
           `${position.coords.longitude}`
         );
       });
-      latitude = parseInt(
-        window.localStorage.getItem(LocalStorageKeys.latitude) ?? ""
+
+      setLat(
+        parseInt(window.localStorage.getItem(LocalStorageKeys.latitude) ?? "")
       );
-      longitude = parseInt(
-        window.localStorage.getItem(LocalStorageKeys.longitude) ?? ""
+      setLong(
+        parseInt(window.localStorage.getItem(LocalStorageKeys.longitude) ?? "")
       );
     } catch (err) {
       console.log(err);
     }
+  }, []);
 
+  useEffect(() => {
+    if (lat === 0 && long === 0) {
+      return;
+    }
     fetch(
-      `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${latitude}&lon=${longitude}`
+      `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${long}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -45,10 +51,10 @@ export function useGeoLocationCoords(setWeather: (weather: Weather) => void) {
               .relative_humidity,
         });
       });
-  }, []);
+  }, [lat, long]);
 
   return {
-    latitude,
-    longitude,
+    lat,
+    long,
   };
 }

@@ -7,7 +7,7 @@ import { useGeoLocationCoords } from "./useGeoLocationCoords";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
-  const { latitude, longitude } = useGeoLocationCoords(setWeather);
+  const { lat: latitude, long: longitude } = useGeoLocationCoords(setWeather);
 
   const IconComponent =
     weather && weather.icon ? weatherIcons[weather.icon] : null;
