@@ -8,6 +8,13 @@ export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
 
   useEffect(() => {
+    try {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position);
+      });
+    } catch (err) {
+      console.log(err);
+    }
     fetch(
       "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=10"
     )
