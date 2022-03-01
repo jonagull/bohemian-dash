@@ -1,5 +1,6 @@
 $background-color: #272727;
 $secondary-color: #747474;
+$weather-widget-color: #1b1b24;
 
 body {
   background: $background-color;
@@ -26,14 +27,48 @@ body {
     margin: 0 0 0 20px;
     justify-content: flex-start;
 
-    img {
-      height: 45px;
+    svg {
+      height: auto;
       width: auto;
     }
   }
 }
 
-.helicopters {
+.weather-widget--wrapper {
+  margin: 10px 0 0 20px;
+  height: 300px;
+  width: 300px;
+  background-color: $weather-widget-color;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stats--container {
+    display: flex;
+
+    div {
+      display: flex;
+      margin: 10px;
+    }
+
+    span {
+      margin: 2px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
