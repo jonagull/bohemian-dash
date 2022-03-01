@@ -1,4 +1,3 @@
-import { isPropertySignature } from "typescript";
 import { WeatherIcon } from "./constants";
 
 export interface Weather {
