@@ -20,10 +20,12 @@ export function useGeoLocationCoords(setWeather: (weather: Weather) => void) {
       });
 
       setLat(
-        parseInt(window.localStorage.getItem(LocalStorageKeys.latitude) ?? "")
+        parseFloat(window.localStorage.getItem(LocalStorageKeys.latitude) ?? "")
       );
       setLong(
-        parseInt(window.localStorage.getItem(LocalStorageKeys.longitude) ?? "")
+        parseFloat(
+          window.localStorage.getItem(LocalStorageKeys.longitude) ?? ""
+        )
       );
     } catch (err) {
       console.log(err);

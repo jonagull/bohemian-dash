@@ -4,10 +4,12 @@ import HumidIcon from "../assets/HumidIcon";
 import { weatherIcons, LocalStorageKeys } from "../../constants";
 import { Weather } from "../../types";
 import { useGeoLocationCoords } from "./useGeoLocationCoords";
+import { useGetNearestCities } from "./useGetNearestCity";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
   const { lat: latitude, long: longitude } = useGeoLocationCoords(setWeather);
+  const cityName: string = useGetNearestCities(latitude, longitude);
 
   const IconComponent =
     weather && weather.icon ? weatherIcons[weather.icon] : null;
@@ -18,14 +20,14 @@ export default function WeatherWidget() {
         <div className="content__container">
           {IconComponent && <IconComponent />}
           {weather && <h1>{weather.airTemperature}°</h1>}
-          <p></p>
+          <p>{cityName}</p>
         </div>
         <div className="stats__container">
           <div>
             <span>
               <WindIcon />
             </span>
-            <span>{weather?.windSpeed} km/h</span>
+            <span>{weather?.windSpeed} m/s</span>
           </div>
           <div>
             <span>
