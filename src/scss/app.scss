@@ -73,3 +73,16 @@ body {
     }
   }
 }
+
+.stock-widget__wrapper {
+  margin: 10px 0 0 20px;
+  height: 300px;
+  width: 300px;
+  background-color: $weather-widget-color;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
