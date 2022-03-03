@@ -1,5 +1,10 @@
 import LightmodeSun from "./components/assets/Lightmode-sun";
 
+export const LocalStorageKeys = {
+  latitude: "bhd_latitude",
+  longitude: "bhd_longitude",
+};
+
 export enum WeatherIcon {
   clearSky = "clearsky",
   cloudy = "cloudy",
