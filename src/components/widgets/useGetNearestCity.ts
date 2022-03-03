@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ClassificationTypeNames } from "typescript";
 
 export function useGetNearestCities(latitude: number, longitude: number) {
   const [cityName, setCityName] = useState("");
