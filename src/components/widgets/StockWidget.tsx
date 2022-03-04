@@ -1,4 +1,5 @@
 import React from "react";
+import ChartComp from "./ChartComp";
 
 export function StockWidget() {
   return (
@@ -11,7 +12,9 @@ export function StockWidget() {
         <div className="company-name__container">
           <p>Apple Corporation</p>
         </div>
-        <div className="chart-data__container">Chart data</div>
+        <div className="chart-data__container">
+          <ChartComp />
+        </div>
         <div className="price__container">
           <h1>114.44</h1>
         </div>
