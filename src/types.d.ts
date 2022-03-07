@@ -7,10 +7,7 @@ export interface Weather {
   humidity: number;
 }
 
-export interface ChartData {
-  closePrice: number;
-  highPrice: number;
-  lowPrice: number;
-  openPrice: number;
-  averagePrice: number;
+export interface StockPrice {
+  name: string;
+  price: number;
 }
