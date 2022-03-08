@@ -8,8 +8,10 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <WeatherWidget />
-      <StockWidget />
+      <div className="widget__wrapper">
+        <WeatherWidget />
+        <StockWidget />
+      </div>
     </React.Fragment>
   );
 }
