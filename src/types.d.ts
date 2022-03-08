@@ -6,3 +6,8 @@ export interface Weather {
   airTemperature: number;
   humidity: number;
 }
+
+export interface StockPrice {
+  name: string;
+  price: number;
+}
