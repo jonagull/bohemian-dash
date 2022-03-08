@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import WindIcon from "../assets/WindIcon";
-import HumidIcon from "../assets/HumidIcon";
+import { ReactComponent as HumidIcon } from "../../assets/icons/HumidIcon.svg";
+import { ReactComponent as WindIcon } from "../../assets/icons/WindIcon.svg";
 import { weatherIcons, LocalStorageKeys } from "../../constants";
 import { Weather } from "../../types";
 import { useGeoLocationCoords } from "./useGeoLocationCoords";
