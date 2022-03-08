@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { StockPrice } from "../../types";
+import { StockPrice } from "../../../types";
 
-export function useGetStockData() {
+export function useGetStockPriceData() {
   const [stockPrice, setStockPrice] = useState<StockPrice[] | null>(null);
 
   function fetchData() {
@@ -19,7 +19,6 @@ export function useGetStockData() {
     )
       .then((data) => data.json())
       .then((data) => {
-        console.log(data);
         setStockPrice(
           Object.keys(data["Monthly Time Series"])
             .map((key) => ({
@@ -37,6 +36,5 @@ export function useGetStockData() {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(stockPrice);
   return stockPrice;
 }

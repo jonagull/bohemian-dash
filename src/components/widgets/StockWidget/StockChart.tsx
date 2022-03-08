@@ -1,8 +1,9 @@
 import React from "react";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
-import { useGetStockData } from "./useGetStockPriceData";
-export default function ChartComp() {
-  const stockPrice = useGetStockData();
+import { useGetStockPriceData } from "./useGetStockPriceData";
+
+export default function StockChart() {
+  const stockPrice = useGetStockPriceData();
 
   return (
     <ResponsiveContainer width="100%" height="100%">
