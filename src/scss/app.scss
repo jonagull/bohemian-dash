@@ -1,8 +1,23 @@
-$background-color: #272727;
-$secondary-color: #747474;
-$weather-widget-color: #1b1b24;
+$background-color: #273b46;
+$header-color: #344a57;
+$widget-color: #344a57;
+$subtext-color: #999999;
+$primary-fill-color: white;
+$widget-width: 50%;
+$widget-widht-test: calc(100% - 10px);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
+  font-family: Poppins, sans-serif;
   background: $background-color;
   margin: 0;
   padding: 0;
@@ -11,37 +26,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+}
+
+.widget__wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .header {
-  margin: 30px 5% 0 5%;
-  width: 90%;
-  height: 80px;
+  margin: 0 0 0 0;
+  height: 50px;
   border-radius: 10px;
-  background-color: $secondary-color;
+  background-color: $header-color;
   display: flex;
   align-items: center;
 
   .header__logo {
     margin: 0 0 0 20px;
     justify-content: flex-start;
-    height: 60px;
+    height: 25px;
     width: 100%;
+    fill: $primary-fill-color;
 
     svg {
       height: auto;
       width: auto;
     }
   }
+
+  .user-credentials__container {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    color: $primary-fill-color;
+    font-weight: 400;
+
+    span {
+      margin: 1px;
+    }
+  }
 }
 
 .weather-widget__wrapper {
-  margin: 10px 0 0 60px;
-  height: 300px;
-  width: 300px;
-  background-color: $weather-widget-color;
+  padding: 30px;
+  margin: 10px 5px 0 0;
+  height: auto;
+  flex: 1;
+  background-color: $widget-color;
   border-radius: 40px;
-  color: white;
+  color: $primary-fill-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,13 +110,12 @@ body {
 
 .stock-widget__wrapper {
   padding: 30px;
-  margin: 10px 0 0 60px;
-  height: 300px;
-  width: 300px;
-  background-color: $weather-widget-color;
+  flex: 1;
+  margin: 10px 0 0 5px;
+  height: auto;
+  background-color: $widget-color;
   border-radius: 40px;
   color: white;
-  position: relative;
 
   .ticker__container {
     display: flex;
@@ -103,14 +136,15 @@ body {
   .company-name__container {
     display: flex;
     p {
-      color: #747474;
+      color: $subtext-color;
     }
   }
 
   .chart-data__container {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 120px;
+    margin-left: 20px;
   }
 
   .price__container {

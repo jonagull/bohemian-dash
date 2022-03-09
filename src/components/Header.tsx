@@ -1,5 +1,5 @@
 import React from "react";
-import Applogo from "./assets/AppLogo";
+import { ReactComponent as Applogo } from "../assets/icons/bhdlogo.svg";
 
 export default function Header() {
   return (
@@ -7,6 +7,11 @@ export default function Header() {
       <header className="header">
         <div className="header__logo">
           <Applogo />
+        </div>
+        <div className="user-credentials__container">
+          <span>№</span>
+          <span>1337</span>
+          <span>▼</span>
         </div>
       </header>
     </React.Fragment>
