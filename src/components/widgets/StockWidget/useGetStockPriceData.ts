@@ -25,7 +25,7 @@ export function useGetStockPriceData() {
               name: key,
               price: parseFloat(data["Monthly Time Series"][key]["2. high"]),
             }))
-            .sort((a, b) => (a > b ? 1 : -1))
+            .sort((a, b) => (a.name > b.name ? 1 : -1))
         );
       })
       .catch((err) => {
