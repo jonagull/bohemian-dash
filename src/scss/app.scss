@@ -81,6 +81,13 @@ body {
   justify-content: center;
   align-items: center;
 
+  .icon__container {
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
   h1 {
     display: flex;
     justify-content: center;
