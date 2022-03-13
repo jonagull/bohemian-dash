@@ -1,3 +1,6 @@
+@import "~react-grid-layout/css/styles.css";
+@import "~react-resizable/css/styles.css";
+
 $background-color: #273b46;
 $header-color: #344a57;
 $widget-color: #344a57;
@@ -27,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 20px;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: white;
+  border-radius: 40px;
 }
 
 .widget__wrapper {
@@ -71,7 +79,7 @@ body {
 .weather-widget__wrapper {
   padding: 30px;
   margin: 10px 5px 0 0;
-  height: auto;
+  height: 100%;
   flex: 1;
   background-color: $widget-color;
   border-radius: 40px;
@@ -119,7 +127,8 @@ body {
   padding: 30px;
   flex: 1;
   margin: 10px 0 0 5px;
-  height: auto;
+  height: 100%;
+  width: 100%;
   background-color: $widget-color;
   border-radius: 40px;
   color: white;

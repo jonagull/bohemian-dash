@@ -1,17 +1,14 @@
 import React from "react";
 import "./scss/app.scss";
 import Header from "./components/Header";
-import WeatherWidget from "./components/widgets/WeatherWidget";
-import { StockWidget } from "./components/widgets/StockWidget";
+import { Grid } from "./Grid";
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <div className="widget__wrapper">
-        <WeatherWidget />
-        <StockWidget />
-      </div>
+      <div className="widget__wrapper"></div>
+      <Grid />
     </React.Fragment>
   );
 }
