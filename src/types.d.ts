@@ -16,3 +16,14 @@ export interface SelectOption {
   value: string;
   label: string;
 }
+
+export interface SaunaData {
+  id: number;
+  humidity: number;
+  temperature: number;
+}
+
+export interface SaunaResponseBody {
+  data: SaunaData[];
+  error: boolean;
+}
