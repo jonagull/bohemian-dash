@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Select, { ValueContainerProps } from "react-select";
+import Select from "react-select";
 import { SelectOption } from "../../../types";
 
 const Checkbox = ({ children, ...props }: JSX.IntrinsicElements["input"]) => (
@@ -9,27 +9,13 @@ const Checkbox = ({ children, ...props }: JSX.IntrinsicElements["input"]) => (
   </label>
 );
 
-interface State {
-  readonly isClearable: boolean;
-  readonly isSearchable: boolean;
-}
-
-export default class SelectDropDownMenu extends Component<
-  {
-    ticker: SelectOption | null;
-    setTicker: React.Dispatch<React.SetStateAction<SelectOption | null>>;
-    defaultValue: SelectOption | null;
-    options: SelectOption[];
-  },
-  State
-> {
-  state: State = {
-    isClearable: true,
-    isSearchable: true,
-  };
-
+export default class SelectDropDownMenu extends Component<{
+  ticker: SelectOption | null;
+  setTicker: React.Dispatch<React.SetStateAction<SelectOption | null>>;
+  defaultValue: SelectOption | null;
+  options: SelectOption[];
+}> {
   render() {
-    const { isClearable, isSearchable } = this.state;
     const { ticker, setTicker, defaultValue, options } = this.props;
 
     const colorNames = {
@@ -52,8 +38,8 @@ export default class SelectDropDownMenu extends Component<
           className="basic-single"
           classNamePrefix="select"
           defaultValue={defaultValue}
-          isClearable={isClearable}
-          isSearchable={isSearchable}
+          isClearable={true}
+          isSearchable={true}
           name="color"
           options={options}
           onChange={(value) => setTicker(value ?? null)}
