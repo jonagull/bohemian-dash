@@ -3,13 +3,10 @@ import GridLayout from "react-grid-layout";
 import { StockWidget } from "./components/widgets/StockWidget";
 import WeatherWidget from "./components/widgets/WeatherWidget";
 
-// const ResponsiveGridLayout = WidthProvider(Responsive);
-
 export const Grid = () => {
   const layout = [
     { i: "a", x: 0, y: 0, w: 3, h: 9 },
     { i: "b", x: 3, y: 0, w: 3, h: 9 },
-    { i: "c", x: 6, y: 0, w: 3, h: 9 },
   ];
 
   const [width, setWidth] = useState<number>(window.innerWidth);
