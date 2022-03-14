@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import Select from "react-select";
 import { SelectOption } from "../../../types";
 
-const Checkbox = ({ children, ...props }: JSX.IntrinsicElements["input"]) => (
-  <label style={{ marginRight: "1em" }}>
-    <input type="checkbox" {...props} />
-    {children}
-  </label>
-);
-
 export default class SelectDropDownMenu extends Component<{
   ticker: SelectOption | null;
   setTicker: React.Dispatch<React.SetStateAction<SelectOption | null>>;
