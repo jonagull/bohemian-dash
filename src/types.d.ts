@@ -11,3 +11,8 @@ export interface StockPrice {
   name: string;
   price: number;
 }
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}

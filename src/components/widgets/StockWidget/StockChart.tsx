@@ -2,8 +2,8 @@ import React from "react";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
 import { useGetStockPriceData } from "./useGetStockPriceData";
 
-export default function StockChart() {
-  const stockPrice = useGetStockPriceData();
+export default function StockChart({ ticker }: { ticker: string }) {
+  const stockPrice = useGetStockPriceData(ticker);
 
   return (
     <ResponsiveContainer width="100%" height="100%">

@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { StockPrice } from "../../../types";
 
-export function useGetStockPriceData() {
+export function useGetStockPriceData(ticker: string) {
   const [stockPrice, setStockPrice] = useState<StockPrice[] | null>(null);
 
-  function fetchData() {
-    const ticker = "AAPL";
+  const fetchData = useCallback(() => {
     fetch(
       `https://alpha-vantage.p.rapidapi.com/query?symbol=${ticker}&function=TIME_SERIES_MONTHLY&datatype=jsn`,
       {
@@ -31,10 +30,10 @@ export function useGetStockPriceData() {
       .catch((err) => {
         console.error(err);
       });
-  }
+  }, [setStockPrice, ticker]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
   return stockPrice;
 }
