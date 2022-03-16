@@ -14,19 +14,19 @@ export function StockWidget() {
     ticker?.value ?? defaultTickerValue?.value ?? null
   );
 
-  console.log(defaultTickerValue);
-  let currentPrice = 0;
-  let ipoDatePrice = 0;
-  let ipoDate = "";
+  let currentPrice = null;
+  let ipoDatePrice = null;
+  let ipoDate = null;
+  let percentageDifferenceAllTime = null;
 
   if (stockPrice && stockPrice.length) {
     currentPrice = stockPrice[stockPrice.length - 1].price;
     ipoDatePrice = stockPrice[0].price;
     ipoDate = stockPrice[0].name;
+    percentageDifferenceAllTime = parseFloat(
+      (((currentPrice - ipoDatePrice) / ipoDatePrice) * 100).toFixed(1)
+    );
   }
-  const percentageDifferenceAllTime = parseFloat(
-    (((currentPrice - ipoDatePrice) / ipoDatePrice) * 100).toFixed(1)
-  );
 
   const today = new Date();
   const date =
@@ -36,34 +36,43 @@ export function StockWidget() {
     <React.Fragment>
       <div className="stock-widget__wrapper">
         <div className="dropdown__container">
-          <SelectDropDownMenu
-            ticker={ticker}
-            setTicker={setTicker}
-            defaultValue={defaultTickerValue}
-            options={stockNames}
-          />
-          <div className="percentage__container">
-            <h6
-              className={
-                percentageDifferenceAllTime >= 0 ? "text--green" : "text--red"
-              }
-            >
-              {percentageDifferenceAllTime}%
-            </h6>
-          </div>
+          {defaultTickerValue && (
+            <SelectDropDownMenu
+              ticker={ticker}
+              setTicker={setTicker}
+              defaultValue={defaultTickerValue}
+              options={stockNames}
+            />
+          )}
+
+          {percentageDifferenceAllTime && (
+            <div className="percentage__container">
+              <h6
+                className={
+                  percentageDifferenceAllTime >= 0 ? "text--green" : "text--red"
+                }
+              >
+                {percentageDifferenceAllTime}%
+              </h6>
+            </div>
+          )}
         </div>
         <div className="ticker-name__container">
           <p>{ticker?.value ?? defaultTickerValue?.value}</p>
-          <p>
-            {ipoDate} - {date}
-          </p>
+          {ipoDate && (
+            <p>
+              {ipoDate} - {date}
+            </p>
+          )}
         </div>
         <div className="chart-data__container">
           <StockChart data={stockPrice} />
         </div>
-        <div className="price__container">
-          <h1>${currentPrice} USD</h1>
-        </div>
+        {currentPrice && (
+          <div className="price__container">
+            <h1>${currentPrice} USD</h1>
+          </div>
+        )}
       </div>
     </React.Fragment>
   );
