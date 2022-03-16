@@ -6,7 +6,7 @@ export const useGetStockNames = () => {
   const [stockNameData, setStockNameData] = useState<SelectOption[]>([]);
   const fetchData = () => {
     fetch(
-      "https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=XU0ZUP2UUIVXY3OU"
+      "https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=NED8AXBG2KBGMW7E"
     )
       .then((response) => response.text())
       .then((data) => Papa.parse(data))
@@ -20,7 +20,8 @@ export const useGetStockNames = () => {
             // First item is keys
             .slice(11000)
         );
-      });
+      })
+      .catch((error: any) => console.log(error));
   };
 
   useEffect(() => {
