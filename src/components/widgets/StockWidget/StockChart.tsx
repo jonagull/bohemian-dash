@@ -1,14 +1,12 @@
 import React from "react";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
-import { useGetStockPriceData } from "./useGetStockPriceData";
+import { StockPrice } from "../../../types";
 
-export default function StockChart({ ticker }: { ticker: string }) {
-  const stockPrice = useGetStockPriceData(ticker);
-
+export default function StockChart({ data }: { data: StockPrice[] | null }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
-        data={stockPrice as any[]}
+        data={data ?? undefined}
         margin={{
           top: 5,
           right: 0,
@@ -22,8 +20,7 @@ export default function StockChart({ ticker }: { ticker: string }) {
             <stop offset="95%" stopColor="#34c759" stopOpacity={0.1} />
           </linearGradient>
         </defs>
-        <XAxis dataKey="name" />
-        <Tooltip separator=": $" />
+        <XAxis dataKey="name" hide={true} />
         <Area
           type="monotone"
           dataKey="price"
@@ -31,6 +28,7 @@ export default function StockChart({ ticker }: { ticker: string }) {
           fill="url(#colorPv)"
           strokeWidth="2px"
         />
+        <Tooltip separator=": $" />
       </AreaChart>
     </ResponsiveContainer>
   );
