@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import GridLayout from "react-grid-layout";
 import { SaunaWidget } from "./components/widgets/SaunaWidget/SaunaWidget";
 import { StockWidget } from "./components/widgets/StockWidget";
-import WeatherWidget from "./components/widgets/WeatherWidget";
+import WeatherWidget from "./components/widgets/WeatherWidget/WeatherWidget";
 
 export const Grid = () => {
   const layout = [
