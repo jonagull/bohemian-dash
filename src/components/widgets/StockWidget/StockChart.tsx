@@ -28,7 +28,14 @@ export default function StockChart({ data }: { data: StockPrice[] | null }) {
           fill="url(#colorPv)"
           strokeWidth="2px"
         />
-        <Tooltip separator=": $" />
+        <Tooltip
+          separator=": $"
+          contentStyle={{
+            backgroundColor: "#152026",
+            border: "none",
+            borderRadius: 8,
+          }}
+        />
       </AreaChart>
     </ResponsiveContainer>
   );
