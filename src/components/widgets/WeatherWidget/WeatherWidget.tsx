@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as HumidIcon } from "../../assets/icons/HumidIcon.svg";
-import { ReactComponent as WindIcon } from "../../assets/icons/WindIcon.svg";
-import { weatherIcons, LocalStorageKeys } from "../../constants";
-import { Weather } from "../../types";
+import { weatherIcons } from "../../../constants";
+import { Weather } from "../../../types";
+import { ReactComponent as HumidIcon } from "../../../assets/icons/HumidIcon.svg";
+import { ReactComponent as WindIcon } from "../../../assets/icons/WindIcon.svg";
 import { useGeoLocationCoords } from "./useGeoLocationCoords";
 import { useGetNearestCities } from "./useGetNearestCity";
 
 export default function WeatherWidget() {
   const [weather, setWeather] = useState<Weather | null>(null);
   const { lat: latitude, long: longitude } = useGeoLocationCoords(setWeather);
-  const cityName: string = useGetNearestCities(latitude, longitude);
+  const cityName: string | null = useGetNearestCities(latitude, longitude);
 
   const IconComponent =
     weather && weather.icon ? weatherIcons[weather.icon] : null;

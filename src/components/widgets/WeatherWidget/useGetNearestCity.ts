@@ -3,8 +3,20 @@ import React, { useEffect, useState } from "react";
 export function useGetNearestCities(latitude: number, longitude: number) {
   const [cityName, setCityName] = useState("");
 
+  const getCityName = () => {
+    return window.localStorage.getItem("cityName");
+  };
+
+  const storeCityName = () => {
+    window.localStorage.setItem("cityName", cityName);
+  };
+
   useEffect(() => {
     if (latitude === 0 && longitude === 0) {
+      return;
+    }
+
+    if (getCityName() !== "") {
       return;
     }
 
@@ -15,7 +27,7 @@ export function useGetNearestCities(latitude: number, longitude: number) {
         headers: {
           "x-rapidapi-host": "geocodeapi.p.rapidapi.com",
           "x-rapidapi-key":
-            "a2629988b8msha38146193385057p1933c3jsne32f2e63e569",
+            "88861defccmsh860312ac164c739p1c8ad5jsn211f41f9f248",
         },
       }
     )
@@ -24,8 +36,13 @@ export function useGetNearestCities(latitude: number, longitude: number) {
         setCityName(data[0].City);
       })
       .catch((err) => {
-        console.error(err);
+        console.log(err);
       });
   }, [latitude, longitude]);
-  return cityName;
+
+  useEffect(() => {
+    storeCityName();
+  }, [cityName]);
+
+  return getCityName();
 }
