@@ -9,7 +9,7 @@ export default class SelectDropDownMenu extends Component<{
   options: SelectOption[];
 }> {
   render() {
-    const { ticker, setTicker, defaultValue, options } = this.props;
+    const { setTicker, defaultValue, options } = this.props;
 
     const colorNames = {
       text: "neutral80",

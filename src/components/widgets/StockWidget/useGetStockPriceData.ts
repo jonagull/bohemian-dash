@@ -1,10 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { StockPrice } from "../../../types";
 
-export function useGetStockPriceData(ticker: string) {
+export function useGetStockPriceData(ticker: string | null) {
   const [stockPrice, setStockPrice] = useState<StockPrice[] | null>(null);
 
   const fetchData = useCallback(() => {
+    if (!ticker) {
+      return;
+    }
+
     fetch(
       `https://alpha-vantage.p.rapidapi.com/query?symbol=${ticker}&function=TIME_SERIES_MONTHLY&datatype=jsn`,
       {
