@@ -3,6 +3,7 @@ import { useGetSaunaData } from "./useGetSaunaData";
 import { ReactComponent as HumidIcon } from "../../../assets/icons/HumidIcon.svg";
 import { ReactComponent as ThermometerIcon } from "../../../assets/icons/thermometer.svg";
 import { SaunaChart } from "./SaunaChart";
+import { ReactComponent as SaunaIcon } from "../../../assets/icons/sauna.svg";
 
 export const SaunaWidget = () => {
   const saunaData = useGetSaunaData();
@@ -10,7 +11,7 @@ export const SaunaWidget = () => {
   return (
     <div className="sauna-widget__wrapper">
       <div className="title__container">
-        <h1>Sauna</h1>
+        <SaunaIcon />
       </div>
       <div className="sauna-chart__container">
         <SaunaChart data={saunaData} />
