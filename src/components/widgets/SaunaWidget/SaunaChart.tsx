@@ -22,7 +22,14 @@ export function SaunaChart({ data }: { data: SaunaData[] | null }) {
             <stop offset="95%" stopColor="#34c759" stopOpacity={0.1} />
           </linearGradient>
         </defs>
-        <Tooltip separator=": " />
+        <Tooltip
+          separator=": "
+          contentStyle={{
+            backgroundColor: "#152026",
+            border: "none",
+            borderRadius: 8,
+          }}
+        />
         <XAxis dataKey="created_at" />
         <Area
           type="monotone"
