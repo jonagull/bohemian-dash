@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { LocalStorageKeys } from "../../constants";
-import { Weather } from "../../types";
+import { LocalStorageKeys } from "../../../constants";
+import { Weather } from "../../../types";
 
 function getLongitude(): number {
   return parseFloat(
