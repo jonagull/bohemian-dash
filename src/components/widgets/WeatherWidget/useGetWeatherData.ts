@@ -43,30 +43,3 @@ export const useGetWeatherData = (
     };
   }, []);
 };
-
-// function Timer() {
-//   const intervalRef = useRef();
-
-//   useEffect(() => {
-//     const id = setInterval(() => {
-//       // ...
-//     });
-//     intervalRef.current = id;
-//     return () => {
-//       clearInterval(intervalRef.current);
-//     };
-//   });
-
-//   // ...
-// }
-
-// // useGetWeatherData()
-
-// useEffect(() => {
-//   fetchData()
-//   // useref save interval
-
-//   return () => {
-//     // clearinterval
-//     // useref
-//   }
