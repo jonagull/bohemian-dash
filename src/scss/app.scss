@@ -21,9 +21,11 @@ html {
 
 body {
   font-family: Poppins, sans-serif;
+  height: 100vh;
+  width: 100vw;
   background: $background-color;
   margin: 0;
-  padding: 0;
+  padding: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -43,8 +45,9 @@ body {
 
 .header {
   margin: 0 0 0 0;
-  height: 50px;
-  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 40px;
   background-color: $header-color;
   display: flex;
   align-items: center;
@@ -90,7 +93,6 @@ body {
   .title__container {
     margin: 5px;
     height: 25%;
-    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -107,8 +109,8 @@ body {
   }
 
   .sauna-metrics__container {
-    width: 100%;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: flex-end;
 
@@ -191,7 +193,7 @@ body {
   padding: 30px;
   height: 100%;
   width: 100%;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 0;
   background-color: $widget-color;
   border-radius: 40px;
   color: white;

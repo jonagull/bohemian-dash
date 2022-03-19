@@ -6,7 +6,6 @@ import { Grid } from "./Grid";
 function App() {
   return (
     <React.Fragment>
-      <Header />
       <div className="widget__wrapper"></div>
       <Grid />
     </React.Fragment>
