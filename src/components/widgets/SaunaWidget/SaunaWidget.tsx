@@ -19,13 +19,16 @@ export const SaunaWidget = () => {
       <div className="sauna-metrics__container">
         <div className="stats__container">
           <h2 className="temperature__container">
-            <ThermometerIcon /> {saunaData && saunaData[0].temperature} C°
+            <ThermometerIcon />{" "}
+            {saunaData && saunaData[saunaData.length - 1].temperature} C°
           </h2>
           <h2 className="humid__container">
             <span>
               <HumidIcon />
             </span>
-            <span>{saunaData && saunaData[0].humidity} %</span>
+            <span>
+              {saunaData && saunaData[saunaData.length - 1].humidity} %
+            </span>
           </h2>
         </div>
       </div>
