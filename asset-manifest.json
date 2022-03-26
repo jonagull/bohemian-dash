@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bohemian-dash/static/css/main.6166d053.css",
-    "main.js": "/bohemian-dash/static/js/main.c0a03488.js",
+    "main.js": "/bohemian-dash/static/js/main.48959725.js",
     "static/js/787.28cb0dcd.chunk.js": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js",
     "static/media/27m.svg": "/bohemian-dash/static/media/27m.951e634e652fd135977147bc27c4ce17.svg",
     "static/media/29m.svg": "/bohemian-dash/static/media/29m.6f398bef6ff1e4659e238a01cd1256e6.svg",
@@ -93,11 +93,11 @@
     "static/media/01n.svg": "/bohemian-dash/static/media/01n.de8410b5be4ad70db19641cbdc639b3c.svg",
     "index.html": "/bohemian-dash/index.html",
     "main.6166d053.css.map": "/bohemian-dash/static/css/main.6166d053.css.map",
-    "main.c0a03488.js.map": "/bohemian-dash/static/js/main.c0a03488.js.map",
+    "main.48959725.js.map": "/bohemian-dash/static/js/main.48959725.js.map",
     "787.28cb0dcd.chunk.js.map": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6166d053.css",
-    "static/js/main.c0a03488.js"
+    "static/js/main.48959725.js"
   ]
 }
