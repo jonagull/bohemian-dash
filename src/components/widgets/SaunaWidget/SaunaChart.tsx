@@ -4,11 +4,10 @@ import { useGetSaunaData } from "./useGetSaunaData";
 import { SaunaData } from "../../../types";
 
 export function SaunaChart({ data }: { data: SaunaData[] | null }) {
-  const saunaData = useGetSaunaData();
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
-        data={saunaData as any[]}
+        data={data as any[]}
         margin={{
           top: 5,
           right: 0,
