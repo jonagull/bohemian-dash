@@ -21,6 +21,7 @@ export interface SaunaData {
   id: number;
   humidity: number;
   temperature: number;
+  created_at: string;
 }
 
 export interface SaunaResponseBody {
