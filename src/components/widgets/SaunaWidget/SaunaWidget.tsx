@@ -4,12 +4,10 @@ import { ReactComponent as HumidIcon } from "../../../assets/icons/HumidIcon.svg
 import { ReactComponent as ThermometerIcon } from "../../../assets/icons/thermometer.svg";
 import { SaunaChart } from "./SaunaChart";
 import { ReactComponent as SaunaIcon } from "../../../assets/icons/sauna.svg";
-import { useSaunaHighscore } from "./useSaunaHighscore";
-import { FireIcon } from "icons";
+import { SaunaHighscore } from "./SaunaHighscore";
 
 export const SaunaWidget = () => {
   const saunaData = useGetSaunaData();
-  const highscore = useSaunaHighscore();
 
   return (
     <div className="sauna-widget__wrapper">
@@ -36,24 +34,7 @@ export const SaunaWidget = () => {
         </div>
       </div>
 
-      {highscore && (
-        <div className="sauna-highscore">
-          <FireIcon />
-          <div>
-            {`Hottest session ever was a steaming `}
-            <span>{highscore.temperature} C°</span>
-            {` with a humidity of `}
-            <span>{highscore.humidity}%</span>
-            {` on `}
-            {new Intl.DateTimeFormat("en-US", {
-              dateStyle: "full",
-              timeStyle: "long",
-              hour12: false,
-            }).format(new Date(highscore.created_at))}
-            .
-          </div>
-        </div>
-      )}
+      <SaunaHighscore />
     </div>
   );
 };
