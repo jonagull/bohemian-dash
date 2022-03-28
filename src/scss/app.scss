@@ -6,8 +6,12 @@ $header-color: #344a57;
 $widget-color: #344a57;
 $subtext-color: #999999;
 $primary-fill-color: white;
+$red: #eb5160;
+$danger: $red;
 $widget-width: 50%;
 $widget-widht-test: calc(100% - 10px);
+$font-weight-bold: 700;
+$icon-size-md: 34px;
 
 html {
   box-sizing: border-box;
@@ -105,7 +109,8 @@ body {
 
   .sauna-chart__container {
     width: 100%;
-    height: 60%;
+    height: 200px;
+    overflow: hidden;
   }
 
   .sauna-metrics__container {
@@ -126,6 +131,12 @@ body {
         display: flex;
         margin: 10px;
 
+        svg {
+          width: $icon-size-md;
+          height: auto;
+          fill: #fff;
+        }
+
         span {
           margin-left: 7px;
         }
@@ -134,8 +145,9 @@ body {
         display: flex;
         margin: 10px;
         svg {
-          height: 40px;
-          width: 40px;
+          width: $icon-size-md;
+          height: auto;
+          fill: #fff;
         }
       }
     }
@@ -185,6 +197,12 @@ body {
       margin: 2px;
       display: flex;
       align-items: center;
+    }
+
+    svg {
+      height: auto;
+      width: $icon-size-md;
+      fill: #fff;
     }
   }
 }
@@ -241,5 +259,23 @@ body {
     h1 {
       margin: 0;
     }
+  }
+}
+
+.sauna-highscore {
+  display: flex;
+  padding: 20px;
+
+  svg {
+    width: $icon-size-md;
+    height: auto;
+    fill: #fff;
+    flex: 1 0 auto;
+    margin-right: 10px;
+  }
+
+  span {
+    color: $danger;
+    font-weight: $font-weight-bold;
   }
 }

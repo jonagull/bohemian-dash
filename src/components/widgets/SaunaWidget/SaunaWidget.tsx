@@ -4,6 +4,7 @@ import { ReactComponent as HumidIcon } from "../../../assets/icons/HumidIcon.svg
 import { ReactComponent as ThermometerIcon } from "../../../assets/icons/thermometer.svg";
 import { SaunaChart } from "./SaunaChart";
 import { ReactComponent as SaunaIcon } from "../../../assets/icons/sauna.svg";
+import { SaunaHighscore } from "./SaunaHighscore";
 
 export const SaunaWidget = () => {
   const saunaData = useGetSaunaData();
@@ -32,6 +33,8 @@ export const SaunaWidget = () => {
           </h2>
         </div>
       </div>
+
+      <SaunaHighscore />
     </div>
   );
 };
