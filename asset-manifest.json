@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bohemian-dash/static/css/main.6166d053.css",
-    "main.js": "/bohemian-dash/static/js/main.48959725.js",
+    "main.css": "/bohemian-dash/static/css/main.240ac08d.css",
+    "main.js": "/bohemian-dash/static/js/main.07a7693e.js",
     "static/js/787.28cb0dcd.chunk.js": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js",
     "static/media/27m.svg": "/bohemian-dash/static/media/27m.951e634e652fd135977147bc27c4ce17.svg",
     "static/media/29m.svg": "/bohemian-dash/static/media/29m.6f398bef6ff1e4659e238a01cd1256e6.svg",
@@ -76,7 +76,6 @@
     "static/media/50.svg": "/bohemian-dash/static/media/50.4fb7c021acfa8839ba297164ef00fd1b.svg",
     "static/media/02n.svg": "/bohemian-dash/static/media/02n.a28f8ef702f1ff8fd0fe382976aa8d92.svg",
     "static/media/12.svg": "/bohemian-dash/static/media/12.19395b05a6c10cc3756ff81d2c69a2e0.svg",
-    "static/media/thermometer.svg": "/bohemian-dash/static/media/thermometer.e7f20c89a3fbb05b2c2265b30df1f71d.svg",
     "static/media/47.svg": "/bohemian-dash/static/media/47.1c5c4ee53da79b4f3d7a3ae975d96793.svg",
     "static/media/10.svg": "/bohemian-dash/static/media/10.089c7c0ba45475701fe4dbf0328bbc71.svg",
     "static/media/13.svg": "/bohemian-dash/static/media/13.c1a8f3d33111f3194d7fb54a9a6b5941.svg",
@@ -85,19 +84,21 @@
     "static/media/15.svg": "/bohemian-dash/static/media/15.a1cb77cdf4a65b4741045edbda31907e.svg",
     "static/media/09.svg": "/bohemian-dash/static/media/09.c346e04dee848d481274af0a634c6725.svg",
     "static/media/46.svg": "/bohemian-dash/static/media/46.9da9c915654156d14db22faba1e77baa.svg",
-    "static/media/WindIcon.svg": "/bohemian-dash/static/media/WindIcon.42c7ba8c6ebe0bf321d726e2bcab7e83.svg",
+    "static/media/fire.svg": "/bohemian-dash/static/media/fire.4c807ecc239d9ff21b174f0316542d44.svg",
+    "static/media/WindIcon.svg": "/bohemian-dash/static/media/WindIcon.aaf1351cb1d432a4c3717ca2c6ecdb97.svg",
     "static/media/01d.svg": "/bohemian-dash/static/media/01d.9b2d66a41eb2451882649b22df836a55.svg",
     "static/media/04.svg": "/bohemian-dash/static/media/04.f4c494b8b1d37c5de35901b54a7a4519.svg",
-    "static/media/HumidIcon.svg": "/bohemian-dash/static/media/HumidIcon.554b22a73343b870f004091f97e5ec72.svg",
+    "static/media/thermometer.svg": "/bohemian-dash/static/media/thermometer.7d5df446b9d329ad64f5317e01aa83c1.svg",
     "static/media/bhdlogo.svg": "/bohemian-dash/static/media/bhdlogo.be3f13b4041e8313924f8a153b5225bb.svg",
     "static/media/01n.svg": "/bohemian-dash/static/media/01n.de8410b5be4ad70db19641cbdc639b3c.svg",
     "index.html": "/bohemian-dash/index.html",
-    "main.6166d053.css.map": "/bohemian-dash/static/css/main.6166d053.css.map",
-    "main.48959725.js.map": "/bohemian-dash/static/js/main.48959725.js.map",
+    "static/media/HumidIcon.svg": "/bohemian-dash/static/media/HumidIcon.dae50076d8455f68173868914088282f.svg",
+    "main.240ac08d.css.map": "/bohemian-dash/static/css/main.240ac08d.css.map",
+    "main.07a7693e.js.map": "/bohemian-dash/static/js/main.07a7693e.js.map",
     "787.28cb0dcd.chunk.js.map": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6166d053.css",
-    "static/js/main.48959725.js"
+    "static/css/main.240ac08d.css",
+    "static/js/main.07a7693e.js"
   ]
 }
