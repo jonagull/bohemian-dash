@@ -10,13 +10,11 @@ export function useGetStockPriceData(ticker: string | null) {
     }
 
     fetch(
-      `https://alpha-vantage.p.rapidapi.com/query?symbol=${ticker}&function=TIME_SERIES_MONTHLY&datatype=jsn`,
+      `https://alpha-vantage.p.rapidapi.com/query?symbol=${ticker}&function=TIME_SERIES_MONTHLY&datatype=jsn&api=a2629988b8msha38146193385057p1933c3jsne32f2e63e569`,
       {
         method: "GET",
         headers: {
           "x-rapidapi-host": "alpha-vantage.p.rapidapi.com",
-          "x-rapidapi-key":
-            "a2629988b8msha38146193385057p1933c3jsne32f2e63e569",
         },
       }
     )
