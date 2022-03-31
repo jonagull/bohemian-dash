@@ -279,3 +279,139 @@ body {
     font-weight: $font-weight-bold;
   }
 }
+
+.stoic-widget__wrapper {
+  padding: 30px;
+  margin: 0 5px 0 0;
+  height: 100%;
+  width: 100%;
+  background-color: $widget-color;
+  border-radius: 40px;
+  color: $primary-fill-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  svg {
+    margin: 0 0 0 0;
+    height: 30%;
+    width: auto;
+    fill: white;
+  }
+
+  .quote__container {
+    margin: 20px 0 0 0;
+
+    p {
+      font-style: italic;
+      text-align: center;
+      color: grey;
+      font-size: 20px;
+    }
+    h6 {
+      margin: 0 50px 0 0;
+      font-size: 18px;
+      font-style: italic;
+      text-align: end;
+    }
+  }
+  .clouds__wrapper {
+    height: 200px;
+    .cloud-b__container {
+      position: relative;
+      animation-name: clouds;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      margin: 0;
+      transform: translate(10px, 30px);
+
+      svg {
+        height: 40px;
+        opacity: 0.2;
+      }
+
+      .inner-cloud-a__container {
+        height: 5px;
+        margin: 0;
+        transform: translate(90px, 0px);
+
+        svg {
+          height: 20px;
+        }
+      }
+
+      .inner-cloud-b__container {
+        height: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        transform: translate(-120px, 10px);
+
+        svg {
+          height: 15px;
+        }
+      }
+
+      .inner-cloud-c__container {
+        transform: translate(30px, 5px);
+
+        svg {
+          height: 20px;
+        }
+      }
+    }
+
+    .cloud-c__container {
+      position: relative;
+      animation-name: clouds;
+      animation-duration: 18s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      margin: 0;
+
+      .inner-cloud-a__container {
+        margin: 0;
+        transform: translateY(18px);
+
+        svg {
+          height: 30px;
+        }
+      }
+
+      .inner-cloud-b__container {
+        margin: 0;
+        z-index: 1;
+        transform: translate(30px, 35px);
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+          height: 30px;
+        }
+      }
+
+      svg {
+        height: 70px;
+        opacity: 0.2;
+      }
+
+      .inner-cloud-c__container {
+        transform: translate(70px, 10px);
+        svg {
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes clouds {
+  from {
+    left: -350px;
+  }
+  to {
+    left: 350px;
+  }
+}
