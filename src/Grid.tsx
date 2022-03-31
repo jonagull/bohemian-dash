@@ -1,3 +1,4 @@
+import { StoicWidget } from "components/widgets/StoicWidget";
 import React, { useEffect, useState } from "react";
 import GridLayout from "react-grid-layout";
 import Header from "./components/Header";
@@ -11,6 +12,7 @@ export const Grid = () => {
     { i: "b", x: 0, y: 3, w: 4, h: 12 },
     { i: "c", x: 0, y: 3, w: 4, h: 12 },
     { i: "d", x: 0, y: 0, w: 12, h: 2 },
+    { i: "e", x: 0, y: 0, w: 4, h: 12 },
   ];
 
   const layoutPhone = [
@@ -49,6 +51,9 @@ export const Grid = () => {
       </div>
       <div key="d">
         <Header />
+      </div>
+      <div key="e">
+        <StoicWidget />
       </div>
     </GridLayout>
   );
