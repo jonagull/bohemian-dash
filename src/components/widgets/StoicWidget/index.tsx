@@ -16,12 +16,12 @@ export const StoicWidget = () => {
         return Math.floor(Math.random() * filteredQuotes.length);
     };
 
-    const [randomNumber, setRandomNumber] = useState(1);
+    const [randomNumber, setRandomNumber] = useState(randomNumberCreator());
 
     useEffect(() => {
         const interval = setInterval(() => {
             setRandomNumber(randomNumberCreator());
-        }, 10000);
+        }, 20000);
         return () => clearInterval(interval);
     }, []);
 
