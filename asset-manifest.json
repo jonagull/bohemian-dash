@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/bohemian-dash/static/css/main.240ac08d.css",
-    "main.js": "/bohemian-dash/static/js/main.e7997216.js",
+    "main.css": "/bohemian-dash/static/css/main.5fa17b82.css",
+    "main.js": "/bohemian-dash/static/js/main.816589e3.js",
     "static/js/787.28cb0dcd.chunk.js": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js",
+    "static/media/greek.svg": "/bohemian-dash/static/media/greek.4b4f89135738676ba202d76ad9b15899.svg",
     "static/media/27m.svg": "/bohemian-dash/static/media/27m.951e634e652fd135977147bc27c4ce17.svg",
     "static/media/29m.svg": "/bohemian-dash/static/media/29m.6f398bef6ff1e4659e238a01cd1256e6.svg",
     "static/media/20m.svg": "/bohemian-dash/static/media/20m.1bfc1d12c025d53d16b9fc4a1778e0c1.svg",
@@ -74,6 +75,7 @@
     "static/media/30.svg": "/bohemian-dash/static/media/30.c417bfb0d0b8a46922901aefe50765a0.svg",
     "static/media/03n.svg": "/bohemian-dash/static/media/03n.5877456a4768106fc590c5e0bd18f0a1.svg",
     "static/media/50.svg": "/bohemian-dash/static/media/50.4fb7c021acfa8839ba297164ef00fd1b.svg",
+    "static/media/cloud.svg": "/bohemian-dash/static/media/cloud.d0e454edd58fd4afdeb9e243011972dd.svg",
     "static/media/02n.svg": "/bohemian-dash/static/media/02n.a28f8ef702f1ff8fd0fe382976aa8d92.svg",
     "static/media/12.svg": "/bohemian-dash/static/media/12.19395b05a6c10cc3756ff81d2c69a2e0.svg",
     "static/media/47.svg": "/bohemian-dash/static/media/47.1c5c4ee53da79b4f3d7a3ae975d96793.svg",
@@ -85,6 +87,7 @@
     "static/media/09.svg": "/bohemian-dash/static/media/09.c346e04dee848d481274af0a634c6725.svg",
     "static/media/46.svg": "/bohemian-dash/static/media/46.9da9c915654156d14db22faba1e77baa.svg",
     "static/media/fire.svg": "/bohemian-dash/static/media/fire.4c807ecc239d9ff21b174f0316542d44.svg",
+    "static/media/cloud-alt.svg": "/bohemian-dash/static/media/cloud-alt.82667188a75b919b45206b76bcd5c0ef.svg",
     "static/media/WindIcon.svg": "/bohemian-dash/static/media/WindIcon.aaf1351cb1d432a4c3717ca2c6ecdb97.svg",
     "static/media/01d.svg": "/bohemian-dash/static/media/01d.9b2d66a41eb2451882649b22df836a55.svg",
     "static/media/04.svg": "/bohemian-dash/static/media/04.f4c494b8b1d37c5de35901b54a7a4519.svg",
@@ -93,12 +96,12 @@
     "static/media/01n.svg": "/bohemian-dash/static/media/01n.de8410b5be4ad70db19641cbdc639b3c.svg",
     "index.html": "/bohemian-dash/index.html",
     "static/media/HumidIcon.svg": "/bohemian-dash/static/media/HumidIcon.dae50076d8455f68173868914088282f.svg",
-    "main.240ac08d.css.map": "/bohemian-dash/static/css/main.240ac08d.css.map",
-    "main.e7997216.js.map": "/bohemian-dash/static/js/main.e7997216.js.map",
+    "main.5fa17b82.css.map": "/bohemian-dash/static/css/main.5fa17b82.css.map",
+    "main.816589e3.js.map": "/bohemian-dash/static/js/main.816589e3.js.map",
     "787.28cb0dcd.chunk.js.map": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.240ac08d.css",
-    "static/js/main.e7997216.js"
+    "static/css/main.5fa17b82.css",
+    "static/js/main.816589e3.js"
   ]
 }
