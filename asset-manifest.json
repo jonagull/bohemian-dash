@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bohemian-dash/static/css/main.5fa17b82.css",
-    "main.js": "/bohemian-dash/static/js/main.816589e3.js",
+    "main.js": "/bohemian-dash/static/js/main.2a93a5bf.js",
     "static/js/787.28cb0dcd.chunk.js": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js",
     "static/media/greek.svg": "/bohemian-dash/static/media/greek.4b4f89135738676ba202d76ad9b15899.svg",
     "static/media/27m.svg": "/bohemian-dash/static/media/27m.951e634e652fd135977147bc27c4ce17.svg",
@@ -97,11 +97,11 @@
     "index.html": "/bohemian-dash/index.html",
     "static/media/HumidIcon.svg": "/bohemian-dash/static/media/HumidIcon.dae50076d8455f68173868914088282f.svg",
     "main.5fa17b82.css.map": "/bohemian-dash/static/css/main.5fa17b82.css.map",
-    "main.816589e3.js.map": "/bohemian-dash/static/js/main.816589e3.js.map",
+    "main.2a93a5bf.js.map": "/bohemian-dash/static/js/main.2a93a5bf.js.map",
     "787.28cb0dcd.chunk.js.map": "/bohemian-dash/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5fa17b82.css",
-    "static/js/main.816589e3.js"
+    "static/js/main.2a93a5bf.js"
   ]
 }
